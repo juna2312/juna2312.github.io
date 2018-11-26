@@ -1,0 +1,157 @@
+@import "../bourbon/bourbon"
+
+$color: #77aadd //text menu голубой
+$footer_color: #888//text color #888
+$main_color: #112233 //header
+
+// $new_color: #112233	#445566
+//light #E6F0F9
+//dark #445566
+$bg_dark: #1b3650
+$bg_light: #E7F3F9
+// $bg_light: #FAFAFA
+$text_color: #305c87//текст в обо мне#2966A3
+
+@mixin kerning($kerning)
+	letter-spacing: $kerning + px
+
+body
+	color: $main_color
+	+kerning(1)
+
+a
+	color: $color
+
+p,
+body .main_footer,
+.s_about li
+	color: $footer_color
+
+.color_element
+	color: $color
+.color_bg
+	background-color: $color
+.color_border
+	border-color: $color
+
+// .main_color_bg
+// 	background-color: $main_color
+.bg_light
+	background-color: $bg_light
+
+.bg_dark
+	background-color: $bg_dark
+	color: $bg_light
+	.s_descr::after
+		background-color: $bg_light
+
+svg
+	path
+		fill: $main_color
+
+.toggle_menu
+	background-color: $main_color
+
+.top_menu
+	a:hover
+		color: $color
+	a
+		+kerning(4)
+.top_text
+	p
+		color: $bg_dark
+		+kerning(4)
+
+.s_descr
+	+kerning(4)
+	&::after
+		background-color: $main_color
+		opacity: 0.4
+section
+	h3
+		+kerning(4)
+		color: $bg_dark
+
+.s_about
+	p:nth-child(even)
+		color: $text_color
+
+.personal_header
+	+kerning(2)
+
+.resume_container
+	h3
+		color: $main_color
+		+kerning(2)
+		font-size: 18px
+		font-weight: 600
+	.left .resume_discription strong
+		margin-left: 10px
+	.right .resume_discription strong
+		margin-right: 10px
+
+.resume_icon
+	font-size: 40px
+	margin-bottom: 35px
+
+.resume_item
+	.year
+		background-color: $text_color
+		
+.resume_discription
+	+kerning(1)
+
+.s_portfolio
+	li
+		color: rgba($bg_light, .7)
+		+kerning(2)
+		// font-weight: 100
+	.active
+		color: white
+		border-bottom: 1px solid $color
+.port_item_cont
+	background-color: rgba($bg_dark, .9)
+	p
+		color: $bg_light
+	h3
+		+kerning(1)
+	button
+		border-radius: 15px 15px 15px 15px
+		border: $color 1px solid
+	.popup
+		color: $text_color
+		font-weight: 600
+		font-size: 12px
+		+kerning(1)
+
+.main_footer a
+	color: $bg_light
+
+.contact_box
+	h3
+		color: $bg_dark
+	.contact_icons
+		color: $text_color
+		p
+			color: $text_color
+.text-danger,
+.star
+	color: $color
+
+form 
+	input:focus,
+	textarea:focus
+		border: 1px solid $color
+	input,
+	textarea
+		+kerning(2)
+	button
+		background-color: $bg_dark
+		+kerning(2)
+	.form-group
+		+kerning(2)
+		color: $text_color
+		text-transform: uppercase
+		
+
+		
